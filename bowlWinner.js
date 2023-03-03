@@ -38,8 +38,8 @@ function scoresBeforeHandi (finalScore, handicap, numOfStrings) {
 
 let allScoresPreHandi = []
 // Pushes scores into an array by calling the scoresBeforeHandi function
-function preHandicapScores (allScoresPostHandi){
-    for (let i = 0; i < allScoresPostHandi.length; i++){
+function preHandicapScores (allScoresPostHandi) {
+    for (let i = 0; i < allScoresPostHandi.length; i++) {
         let beforeHandi = scoresBeforeHandi(allScoresPostHandi[i][0],allScoresPostHandi[i][1],allScoresPostHandi[i][2])
         allScoresPreHandi.push(beforeHandi)
     }
@@ -48,7 +48,7 @@ function preHandicapScores (allScoresPostHandi){
 
 let finalScore = []
 // Pushes final score only into an array (score POST handicap added)
-function getFinalScoreOnly (ArrOfScoresHandiStrings){
+function getFinalScoreOnly (ArrOfScoresHandiStrings) {
     for (let i = 0; i < ArrOfScoresHandiStrings.length; i++){
         finalScore.push(ArrOfScoresHandiStrings[i][0])
     }
@@ -82,11 +82,12 @@ function ultimateScores (arrOfScores) {
 }
 
 let finalRank = ultimateScores(scoresHandiStrings)
+
 // Prints place, final and pre handicap score by using the ultimateScores function
-    for (let i = 0; i < finalRank.length; i++){
-        console.log(`You finished in place ${i+1}`)
-        console.log(`Your final score was ${finalRank[i][0]}`);
-        console.log(`Your pre handicap score was ${finalRank[i][1]}\n`);
+for (let i = 0; i < finalRank.length; i++) {
+    console.log(`You finished in place ${i+1}`)
+    console.log(`Your final score was ${finalRank[i][0]}`);
+    console.log(`Your pre handicap score was ${finalRank[i][1]}\n`);
 }
 
 //Prints:
